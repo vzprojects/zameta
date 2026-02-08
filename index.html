@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Золотой список фраз для юридической защиты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #d4af37, #b8860b);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .shield-icon {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2.5rem;
+            opacity: 0.7;
+        }
+        
+        .warning-box {
+            background-color: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box h3 {
+            color: #ff8f00;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        section {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        section:last-of-type {
+            border-bottom: none;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4af37;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        h2 i {
+            color: #d4af37;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin: 25px 0 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .phrase-box {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .phrase-box.gold {
+            border-left-color: #d4af37;
+            background-color: #fef9e7;
+        }
+        
+        .phrase-text {
+            font-style: italic;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border: 1px dashed #ddd;
+        }
+        
+        .law-reference {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px 5px 5px 0;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th {
+            background-color: #2c3e50;
+            color: white;
+            text-align: left;
+            padding: 15px;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #f1f8ff;
+        }
+        
+        .step-box {
+            background-color: #e8f4fc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #2980b9;
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #2980b9;
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .script-box {
+            background: linear-gradient(to right, #fef9e7, #fef5e7);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 2px solid #d4af37;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+        }
+        
+        .script-box h3 {
+            color: #b8860b;
+            margin-top: 0;
+        }
+        
+        .script-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .script-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .situation {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .response {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .shield-icon {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-top: 15px;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            section, .warning-box {
+                padding: 15px;
+                margin: 15px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> Золотой список фраз и статей для полной защиты</h1>
+            <div class="subtitle">Собрал всё из ваших файлов в готовые скрипты диалогов. Цель — превратить любой диалог в бюрократический ад для сотрудника.</div>
+            <div class="shield-icon"><i class="fas fa-gavel"></i></div>
+        </header>
+        
+        <div class="warning-box">
+            <h3><i class="fas fa-exclamation-triangle"></i> ВАЖНО</h3>
+            <p>Этот список содержит фразы для юридической самозащиты в рамках законодательства. Используйте их уверенно и спокойно, требуя соблюдения Процессуального Кодекса.</p>
+        </div>
+        
+        <section id="section1">
+            <h2><i class="fas fa-walking"></i> РАЗДЕЛ 1: КОГДА ПРОСТО ПОДОШЛИ («На каком основании?»)</h2>
+            <p>Пока на вас нет наручников, вы — свободный гражданин. Используйте эти фразы, чтобы отшить сотрудника, который просто хочет докопаться.</p>
+            
+            <h3><i class="fas fa-id-card"></i> 1. «Представьтесь!»</h3>
+            <p>Если сотрудник что-то требует (документы, остановиться, снять маску), но не показал удостоверение.</p>
+            <div class="phrase-box gold">
+                <div class="phrase-text">«Гражданин, я отказываюсь выполнять ваши требования, так как вы не идентифицировали себя как представителя власти согласно <span class="law-reference">ст. 21.1 Процессуального Кодекса</span>. Покажите удостоверение/жетон в развернутом виде».</div>
+            </div>
+            
+            <h3><i class="fas fa-question-circle"></i> 2. «Причина обращения?»</h3>
+            <p>Если он просто подошел и спрашивает "как дела" или просит документы без причины.</p>
+            <div class="phrase-box">
+                <div class="phrase-text">«Назовите законное основание вашего обращения и требования моих документов согласно <span class="law-reference">ст. 21 Процессуального Кодекса</span>. Я не обязан просто так показывать документы».</div>
+                <p><strong>Нюанс:</strong> Если он говорит «Проверка документов» — требуйте ориентировку или ссылку на закон, разрешающий проверку без причины (обычно в военное положение, в обычное время просто так нельзя).</p>
+            </div>
+            
+            <h3><i class="fas fa-balance-scale"></i> 3. «Я ничего не нарушил» (Презумпция невиновности)</h3>
+            <p>Если он говорит «Вы кажетесь подозрительным».</p>
+            <div class="phrase-box">
+                <div class="phrase-text">«Согласно <span class="law-reference">ст. 1.5 КоАП РФ (Презумпция невиновности)</span>, я считаюсь невиновным, пока моя вина не доказана. Подозрения — это не доказательства. До свидания».</div>
+            </div>
+        </section>
+        
+        <section id="section2">
+            <h2><i class="fas fa-table"></i> РАЗДЕЛ 2: ПОЛНЫЙ СПИСОК СТАТЕЙ ДЛЯ ЗАЩИТЫ</h2>
+            <p>Таблица: что вам шьют — и что отвечать, чтобы развалить дело.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Что шьют (Статья)</th>
+                        <th>Твоя защита (Юридический аргумент)</th>
+                        <th>Ссылка на закон</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Неповиновение</strong><br>(Ст. 78 УК / 8.7 КоАП)</td>
+                        <td>«Ваше требование было незаконным, так как не основано на конкретной норме закона. Согласно <strong>ст. 21 ПК</strong>, я обязан выполнять только <em>законные</em> требования».<br><br>«Я не слышал требования / не понял, что оно мне (отсутствие умысла)».</td>
+                        <td><span class="law-reference">Ст. 21 ПК</span><br><span class="law-reference">Ст. 5 УК</span> (Вина)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Оскорбление</strong><br>(Ст. 91 УК / 5.2 КоАП)</td>
+                        <td>«Это было оценочное суждение / междометие, а не оскорбление. У меня не было прямого умысла унизить вашу честь. Требую переквалификации на мелкое хулиганство или штраф по КоАП».</td>
+                        <td><span class="law-reference">Ст. 5 УК</span> (Нет умысла)<br><span class="law-reference">Ст. 24 Конституции</span> (Свобода слова)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Хулиганство</strong><br>(Ст. 61 УК)</td>
+                        <td>«Я не использовал оружие и не проявлял явного неуважения к обществу. Мои действия попадают под <strong>ст. 8.1 КоАП</strong> (Мелкое хулиганство), это штраф, а не тюрьма».</td>
+                        <td><span class="law-reference">Ст. 8.1 КоАП</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Маска</strong><br>(Ст. 8.12 КоАП)</td>
+                        <td>«Это медицинская маска. Я использую её в целях профилактики заболеваний согласно <strong>ФЗ "Об охране здоровья"</strong>. Статья 8.12 КоАП разрешает ношение медицинских средств защиты».</td>
+                        <td><span class="law-reference">ФЗ №29</span><br><span class="law-reference">Ст. 8.12 КоАП</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Отказ показать паспорт</strong><br>(Ст. 8.7 КоАП)</td>
+                        <td>«Вы не назвали законное основание для проверки (ориентировка/нарушение). Требование показать паспорт без основания — незаконно».</td>
+                        <td><span class="law-reference">Ст. 21 ПК</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Наркотики</strong><br>(Ст. 64 УК)</td>
+                        <td><em>Только если нашли при обыске без ордера на улице:</em> «Обыск был проведен незаконно, без стадии задержания и без ордера. Улики, добытые незаконным путем, недопустимы».</td>
+                        <td><span class="law-reference">Ст. 19 ПК</span> (Правила обыска)<br><span class="law-reference">Ст. 4.6 ПК</span> (Недопустимые доказательства)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="section3">
+            <h2><i class="fas fa-unlock-alt"></i> РАЗДЕЛ 3: УЛЬТИМАТИВНЫЙ ГАЙД ПО ОСВОБОЖДЕНИЮ</h2>
+            <p>Если на вас надели наручники, включайте режим «душнилы» на 100%.</p>
+            
+            <div class="step-box">
+                <h3><span class="step-number">1</span> Ловим на «Правиле Миранды»</h3>
+                <p>Сотрудник <strong>обязан</strong> зачитать права (Ты имеешь право хранить молчание, право на адвоката и т.д.) <strong>СРАЗУ</strong> или в процессе задержания.</p>
+                <div class="phrase-text">«Вы нарушили <span class="law-reference">ст. 10 Процессуального Кодекса</span> и <span class="law-reference">ст. 8 ПК</span>. Вы не разъяснили мне права. Требую освобождения согласно <span class="law-reference">ст. 14 ПК</span>».</div>
+            </div>
+            
+            <div class="step-box">
+                <h3><span class="step-number">2</span> Ловим на Видеофиксации</h3>
+                <div class="phrase-text">«Я требую, чтобы сотрудник предоставил полную видеофиксацию моего нарушения и процесса задержания согласно <span class="law-reference">ст. 15 ПК</span>. Я уверен, что её нет или она неполная».</div>
+                <p><strong>Результат:</strong> Нет видео = Свобода (Ст. 14 ПК).</p>
+            </div>
+            
+            <div class="step-box">
+                <h3><span class="step-number">3</span> Ловим на Телефонном звонке</h3>
+                <p><strong>Ситуация:</strong> Он дал вам телефон, но не снял наручники (или не пристегнул одну руку к столу).</p>
+                <div class="phrase-text">«Вы нарушаете порядок реализации прав (<span class="law-reference">ст. 9.3 ПК</span>). Вы обязаны зафиксировать меня и освободить руки для звонка. Вы халатно относитесь к процедуре (<span class="law-reference">ст. 80 УК</span>). Я напишу иск в суд».</div>
+            </div>
+            
+            <div class="step-box">
+                <h3><span class="step-number">4</span> Ловим на Таймингах</h3>
+                <p><strong>Адвокат:</strong> Если адвокат принял вызов, его обязаны ждать. Если коп продолжил процессуалку, не дождавшись приезда адвоката (при условии, что адвокат ответил и едет) — это <strong>строгое нарушение ст. 9 ПК</strong>.</p>
+            </div>
+        </section>
+        
+        <section id="section4">
+            <h2><i class="fas fa-scroll"></i> ГОТОВЫЙ СКРИПТ (ШПАРГАЛКА)</h2>
+            <p>Держите этот текст под рукой.</p>
+            
+            <div class="script-box">
+                <h3><i class="fas fa-clipboard-list"></i> Полный алгоритм действий</h3>
+                
+                <div class="script-item">
+                    <div class="situation"><i class="fas fa-user-tie"></i> 1. Когда сотрудник только подошел:</div>
+                    <div class="response">"Здравия желаю. Прошу представиться и показать удостоверение в развернутом виде (Ст. 21.1 ПК). Назовите законное основание и статью закона, на которой основано ваше требование (Ст. 21 ПК)."</div>
+                </div>
+                
+                <div class="script-item">
+                    <div class="situation"><i class="fas fa-head-side-mask"></i> 2. Если просит снять маску:</div>
+                    <div class="response">"Данная маска является медицинской. Я ношу её в целях охраны здоровья (ФЗ №29). Статья 8.12 КоАП исключает ответственность за ношение медицинских масок."</div>
+                </div>
+                
+                <div class="script-item">
+                    <div class="situation"><i class="fas fa-handcuffs"></i> 3. Когда надел наручники:</div>
+                    <div class="response">"Вы задержали меня. Требую немедленно реализовать мои права: вызвать государственного адвоката и предоставить телефонный звонок (Ст. 8 ПК). Напоминаю, что вы обязаны вести видеофиксацию (Ст. 15 ПК)."</div>
+                </div>
+                
+                <div class="script-item">
+                    <div class="situation"><i class="fas fa-gavel"></i> 4. На допросе (говори только это):</div>
+                    <div class="response">"Я пользуюсь ст. 38 Конституции и ст. 8 ПК. Не буду свидетельствовать против себя. Требую адвоката. Без него говорить не буду."</div>
+                </div>
+                
+                <div class="script-item">
+                    <div class="situation"><i class="fas fa-exclamation-circle"></i> 5. Если сотрудник "косячит" (не представился, хамит, не зачитал права):</div>
+                    <div class="response">"Гражданин начальник, вы нарушаете процессуальный порядок (Ст. 10 ПК). Ваши действия подпадают под статью 80 УК РФ (Халатность). Требую вызвать прокурора или начальство для фиксации нарушения."</div>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h3><i class="fas fa-lightbulb"></i> ИТОГ</h3>
+                <p>С этими фразами вы юридически защищены со всех сторон. Главное — говорите уверенно и требуйте соблюдения <strong>Процессуального Кодекса</strong>.</p>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Золотой список фраз для юридической защиты • Информация предоставлена в ознакомительных целях</p>
+            <p><i class="far fa-copyright"></i> Обновлено: 2023 • Используйте свои права грамотно</p>
+        </footer>
+    </div>
+
+    <script>
+        // Простой скрипт для плавной прокрутки
+        document.addEventListener('DOMContentLoaded', function() {
+            // Подсветка активного раздела при прокрутке
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            // Добавляем небольшую интерактивность к таблице
+            const tableRows = document.querySelectorAll('table tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('click', function() {
+                    this.style.backgroundColor = '#f0f8ff';
+                    setTimeout(() => {
+                        this.style.backgroundColor = '';
+                    }, 500);
+                });
+            });
+            
+            // Добавляем возможность копирования фраз
+            const phraseTexts = document.querySelectorAll('.phrase-text, .response');
+            phraseTexts.forEach(text => {
+                text.addEventListener('click', function() {
+                    const textToCopy = this.innerText;
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Скопировано!';
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 1500);
+                    });
+                });
+                text.style.cursor = 'pointer';
+                text.title = 'Нажмите, чтобы скопировать';
+            });
+        });
+    </script>
+</body>
+</html>
